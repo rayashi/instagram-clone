@@ -16,7 +16,7 @@ const StoryThumbnail = ({image, username}) => {
     <View style={styles.content}>
       <LinearGradient
         style={styles.avatarBorder}
-        colors={['#fa046c', '#d300c5', '#fbc22e']}>
+        colors={['#e5f61b', '#05c9f9', '#5da92f']}>
         <Image
           source={{
             uri: image,
@@ -33,14 +33,14 @@ const StoryThumbnail = ({image, username}) => {
 const styles = StyleSheet.create({
   content: {
     flexDirection: 'column',
-    marginHorizontal: 8,
+    marginHorizontal: 4,
     marginTop: 5,
   },
   avatar: {
-    width: 65,
-    height: 65,
+    width: 70,
+    height: 80,
     borderRadius: 40,
-    resizeMode: 'contain',
+    resizeMode: 'cover',
     borderColor: '#e700c9',
     borderWidth: 3,
   },

@@ -1,15 +1,21 @@
 import React, {useContext} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {ThemeContext} from '../../App';
-import EntypoIcon from 'react-native-vector-icons/Entypo';
 import FeatherIcon from 'react-native-vector-icons/Feather';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 const FeedItem = ({post}) => {
   const theme = useContext(ThemeContext);
 
   return (
-    <View style={styles.content}>
+    <View style={[styles.content, {backgroundColor: theme.bg}]}>
+      <View style={styles.middle}>
+        <Image
+          source={{
+            uri: post.image,
+          }}
+          style={styles.image}
+        />
+      </View>
       <View style={styles.top}>
         <View style={styles.topLeft}>
           <Image
@@ -23,48 +29,24 @@ const FeedItem = ({post}) => {
             {post.username}
           </Text>
         </View>
-        <EntypoIcon
-          style={styles.topRight}
-          name="dots-three-horizontal"
+        <FeatherIcon
+          style={styles.icon}
+          name="heart"
           color={theme.text}
-          size={16}
+          size={25}
         />
-      </View>
-      <Image
-        source={{
-          uri: post.image,
-        }}
-        style={styles.image}
-      />
-      <View style={styles.bottom}>
-        <View style={styles.bottomLeft}>
-          <FeatherIcon
-            style={styles.icon}
-            name="heart"
-            color={theme.text}
-            size={25}
-          />
-          <FeatherIcon
-            style={styles.icon}
-            name="message-circle"
-            color={theme.text}
-            size={25}
-          />
-          <FeatherIcon
-            style={styles.icon}
-            name="send"
-            color={theme.text}
-            size={25}
-          />
-        </View>
-        <View style={styles.bottomRight}>
-          <FontAwesomeIcon
-            style={styles.icon}
-            name="bookmark-o"
-            color={theme.text}
-            size={25}
-          />
-        </View>
+        <FeatherIcon
+          style={styles.icon}
+          name="message-circle"
+          color={theme.text}
+          size={25}
+        />
+        <FeatherIcon
+          style={styles.icon}
+          name="send"
+          color={theme.text}
+          size={25}
+        />
       </View>
     </View>
   );
@@ -73,14 +55,14 @@ const FeedItem = ({post}) => {
 const styles = StyleSheet.create({
   content: {
     flexDirection: 'column',
-    paddingVertical: 8,
+    margin: 5,
+    borderRadius: 20,
   },
   top: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    marginBottom: 10,
-    paddingHorizontal: 5,
+    padding: 10,
     width: '100%',
   },
   topLeft: {
@@ -113,6 +95,8 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     width: '100%',
     height: 400,
+    borderTopEndRadius: 20,
+    borderTopStartRadius: 20,
   },
   icon: {
     marginHorizontal: 6,

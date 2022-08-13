@@ -5,13 +5,13 @@ const Themes = {
     name: 'dark',
     bg: '#000000',
     text: '#fafafa',
-    secundary: '#0094f6',
+    secundary: '#141414',
   },
   light: {
     name: 'light',
     bg: '#ffffff',
     text: '#000000',
-    secundary: '#0094f6',
+    secundary: '#f7f7f7',
   },
 };
 

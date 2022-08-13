@@ -1,6 +1,6 @@
 import React from 'react';
 import type {Node} from 'react';
-import {SafeAreaView, StyleSheet, useColorScheme, View} from 'react-native';
+import {StyleSheet, useColorScheme, View} from 'react-native';
 import Themes from './Themes';
 import HomeFeed from './pages/HomeFeed/HomeFeed';
 
@@ -11,10 +11,8 @@ const App: () => Node = () => {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <View style={[styles.content, {backgroundColor: theme.bg}]}>
-        <SafeAreaView style={styles.content}>
-          <HomeFeed />
-        </SafeAreaView>
+      <View style={[styles.content, {backgroundColor: theme.secundary}]}>
+        <HomeFeed />
       </View>
     </ThemeContext.Provider>
   );

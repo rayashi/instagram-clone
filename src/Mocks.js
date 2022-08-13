@@ -118,7 +118,7 @@ export const feed = [
     username: 'beto.coder',
     avatar:
       'https://instagram.fudi1-2.fna.fbcdn.net/v/t51.2885-19/278813259_474298834451863_4362741067488229361_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fudi1-2.fna.fbcdn.net&_nc_cat=107&_nc_ohc=d_25xFM7ntsAX82ZpaL&edm=ABfd0MgBAAAA&ccb=7-5&oh=00_AT9h4pcvcLfpyA6IhgyhnsmGfXC3BHYuhcd3NbLVHxjv_w&oe=62F65CCB&_nc_sid=7bff83',
-    image: 'https://picsum.photos/id/1024/1920/1280',
+    image: 'https://picsum.photos/id/1012/3973/2639',
   },
   {
     id: '1',
@@ -137,5 +137,11 @@ export const feed = [
     username: 'michael.jackson',
     avatar: 'https://randomuser.me/api/portraits/women/59.jpg',
     image: 'https://picsum.photos/id/100/2500/1656',
+  },
+  {
+    id: '100',
+    username: 'billclinton',
+    avatar: 'https://randomuser.me/api/portraits/women/59.jpg',
+    image: 'https://picsum.photos/id/1014/6016/4000',
   },
 ];

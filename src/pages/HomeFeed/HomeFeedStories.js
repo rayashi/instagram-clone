@@ -24,7 +24,7 @@ const HomeFeedStories = () => {
 
 const styles = StyleSheet.create({
   content: {
-    paddingVertical: 2,
+    paddingVertical: 5,
     flex: 3,
   },
 });

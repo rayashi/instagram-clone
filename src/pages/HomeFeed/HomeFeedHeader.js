@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 
 import {ThemeContext} from '../../App';
@@ -10,7 +10,7 @@ const HomeFeedHeader = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <View style={styles.content}>
+    <SafeAreaView style={styles.content}>
       <Image
         source={theme.name === 'dark' ? DarkLogo : LightLogo}
         style={styles.logo}
@@ -18,7 +18,7 @@ const HomeFeedHeader = () => {
       <View style={styles.buttons}>
         <FeatherIcon
           style={styles.icon}
-          name="plus-square"
+          name="pocket"
           color={theme.text}
           size={25}
         />
@@ -30,12 +30,12 @@ const HomeFeedHeader = () => {
         />
         <FeatherIcon
           style={styles.icon}
-          name="message-circle"
+          name="zap"
           color={theme.text}
           size={25}
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 10,
   },
   logo: {
     resizeMode: 'contain',

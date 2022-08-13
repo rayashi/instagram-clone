@@ -8,35 +8,25 @@ const HomeFeedTabs = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <View style={styles.content}>
-      <FeatherIcon
-        style={styles.icon}
-        name="home"
-        color={theme.text}
-        size={25}
-      />
+    <View style={[styles.content, {backgroundColor: theme.text}]}>
+      <FeatherIcon style={styles.icon} name="user" color={theme.bg} size={25} />
       <FeatherIcon
         style={styles.icon}
         name="search"
-        color={theme.text}
+        color={theme.bg}
         size={25}
       />
+      <FeatherIcon style={styles.icon} name="home" color={theme.bg} size={25} />
       <FeatherIcon
         style={styles.icon}
         name="play-circle"
-        color={theme.text}
+        color={theme.bg}
         size={25}
       />
       <FeatherIcon
         style={styles.icon}
         name="shopping-bag"
-        color={theme.text}
-        size={25}
-      />
-      <FeatherIcon
-        style={styles.icon}
-        name="user"
-        color={theme.text}
+        color={theme.bg}
         size={25}
       />
     </View>
@@ -45,11 +35,17 @@ const HomeFeedTabs = () => {
 
 const styles = StyleSheet.create({
   content: {
-    flex: 1,
+    position: 'absolute',
+    bottom: 10,
+    right: 0,
+    left: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingVertical: 15,
     paddingHorizontal: 20,
+    borderRadius: 30,
+    margin: 10,
   },
   icon: {
     marginHorizontal: 5,
